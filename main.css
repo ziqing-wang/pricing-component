@@ -1,0 +1,292 @@
+:root {
+    /* Main background */
+    --color-blue-pale: hsl(230, 100%, 99%);
+    /* Full Slider Bar */
+    --color-cyan-soft: hsl(174, 77%, 80%);
+    /* Slider Backround */
+    --color-cyan-strong: hsl(174, 86%, 45%);
+    /* Discount  Backround */
+    --color-grayish-red-light: hsl(14, 92%, 95%);
+    /* Discount  Text */
+    --color-grayish-red: hsl(15, 100%, 70%);
+    /* CTA Text */
+    --color-grayish-blue-light: hsl(226, 100%, 87%);
+
+    /* Empty Slider Bar */
+    --color-grayish-blue-light-1: hsl(224, 65%, 95%);
+    /* Toggle Background */
+    --color-grayish-blue-light-2: hsl(223, 50%, 87%);
+    /* Text */
+    --color-grayish-blue: hsl(225, 20%, 60%);
+    /* Text & CTA Background */
+    --color-desaturated-blue-dark: hsl(227, 35%, 25%);
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--color-blue-pale);
+    background-image: url(images/bg-pattern.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.pricing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pricing-heading {
+    padding: 40px 0;
+    background-image: url(images/pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.text-header {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.text-subtitle {
+    color: var(--color-grayish-blue);
+}
+
+.pricing {
+    background-color: #fff;
+    box-shadow: 0px 2px 20px var(--color-grayish-blue);
+    border-radius: 8px;
+    padding: 36px 36px 16px;
+    color: var(--color-grayish-blue);
+}
+
+/* priceing title  */
+.pricing-title {
+    display: grid;
+    grid-template-areas:
+        'pageview price'
+        'slider slider';
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pricing-title .text-price {
+    grid-area: price;
+}
+
+.text-price .price__span {
+    font-size: 36px;
+    font-weight: 800;
+    color: #000;
+
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+    justify-self: start;
+    grid-area: pageview;
+}
+
+/* Pricing slider bar */
+.pricing-slider-bar {
+    width: 100%;
+    height: 10px;
+    -webkit-appearance: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, var(--color-cyan-soft) 50%, var(--color-grayish-blue-light-1) 50%);
+    margin: 24px 0 42px;
+    grid-area: slider;
+}
+
+.pricing-slider-bar::-webkit-slider-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    box-shadow: 0px 8px 20px var(--color-cyan-strong);
+    background-color: var(--color-cyan-soft);
+    background-image: url(images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.pricing-slider-bar:focus::-webkit-slider-thumb,
+.pricing-slider-bar:hover::-webkit-slider-thumb {
+    background-color: var(--color-cyan-strong);
+}
+
+/* Billings */
+.pricing-billing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing-billing-toggle {
+    width: 50px;
+    height: 25px;
+    border-radius: 25px;
+    background-color: var(--color-grayish-blue-light-2);
+    position: relative;
+    margin: auto 10px;
+}
+
+.pricing-billing-toggle .toggle__btn {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: none;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 2.5px;
+    transform: translate(0, -50%);
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.pricing-billing-yearly::after {
+    content: '25% discount';
+    background-color: var(--color-grayish-red-light);
+    border-radius: 12px;
+    color: var(--color-grayish-red);
+    padding: 0 5px;
+    margin-left: 5px;
+    font-size: 12px;
+    font-weight: 800;
+    display: inline-block;
+}
+
+hr {
+    width: 114%;
+    margin: 60px 0 10px;
+    background-color: var(--color-grayish-blue-light-1);
+    opacity: 0.3;
+    transform: translateX(-6%)
+}
+
+.pricing-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pricing-bottom .pricing-benefits {
+    text-align: left;
+    line-height: 2;
+    list-style-type: none;
+    padding: 0;
+}
+
+.pricing-bottom .pricing-benefits>li::before {
+    content: url(images/icon-check.svg);
+    color: var(--color-cyan-strong);
+    padding-right: 15px;
+}
+
+.pricing-bottom .pricing__btn--confirm {
+    background-color: var(--color-desaturated-blue-dark);
+    color: var(--color-grayish-blue-light);
+    padding: 10px 36px;
+    border-radius: 36px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.pricing-bottom .pricing__btn--confirm:hover {
+    color: white;
+}
+
+.attribution {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 10px;
+    color: var(--color-grayish-blue)
+}
+
+@media (max-width: 500px) {
+    .pricing-container {
+        margin: auto 10px;
+    }
+
+    .pricing-heading {
+        background-size: 32%;
+        margin: 24px 0;
+    }
+
+    .text-header {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    .text-subtitle {
+        margin: auto;
+        width: 50%;
+        font-size: 10px;
+    }
+
+    .pricing {
+        padding: 16px 10px;
+        width: 350px;
+        margin: auto;
+    }
+
+
+    .pricing-title {
+        grid-template-areas:
+            'pageview pageview'
+            'slider slider '
+            'price price'
+        ;
+    }
+
+    .text-uppercase {
+        justify-self: center;
+    }
+
+    .pricing-title .text-price {
+        justify-self: center;
+    }
+
+    .pricing-slider-bar {
+        margin: 24px auto;
+    }
+
+    .pricing-billing span {
+        font-size: 10px;
+    }
+
+    .pricing-billing-toggle {
+        margin: 5px;
+    }
+
+    .pricing-bottom {
+        justify-content: center;
+    }
+
+    .pricing-bottom .pricing-benefits {
+        text-align: center;
+    }
+
+    hr {
+        margin: 20px 0;
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <script src="app.js" defer></script>
+  <title>Interactive pricing component</title>
+
+</head>
+
+<body>
+
+  <div class="pricing-container">
+    <div class="pricing-heading">
+      <h2 class="text-header">Simple, traffic-based pricing</h2>
+      <p class="text-subtitle">Sign-up for our 30-day trial. No credit card required.
+      </p>
+    </div>
+    <div class="pricing">
+      <div class="pricing-title">
+        <p class="text-uppercase pageviews">100k Pageviews</p>
+        <p class="text-price">
+          <span class="price__span"> $16.00 </span>/month
+        </p>
+        <input class="pricing-slider-bar" value="10" type="range" name="slider" id="slider" min="1" max="20">
+      </div>
+      <div class="pricing-billing">
+        <span>Monthly Billing</span>
+        <div class="pricing-billing-toggle">
+          <button class="toggle__btn"></button>
+        </div>
+        <span class="pricing-billing-yearly">Yearly Billing</span>
+      </div>
+      <hr>
+      <div class="pricing-bottom">
+        <ul class="pricing-benefits">
+          <li>Unlimited websites</li>
+          <li>100% data ownership</li>
+          <li>Email reports</li>
+        </ul>
+        <button class="pricing__btn--confirm">Start my trial</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="attribution">
+    Coded by <a href="#">Ziqing Wang</a>.
+  </div>
+</body>
+
+</html>

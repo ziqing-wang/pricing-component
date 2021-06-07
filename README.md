@@ -21,6 +21,7 @@ Here are the different page view ranges and the corresponding monthly price tota
 
 If the visitor switches the toggle to yearly billing, a 25% discount will be applied to all prices.
 
+- Live Site URL: [https://pricing-component-zi.netlify.app/](https://pricing-component-zi.netlify.app/)
 
 ### Screenshot
 
